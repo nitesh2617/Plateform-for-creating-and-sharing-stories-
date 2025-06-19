@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Story Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-brand">Interactive Stories</div>
+        <ul>
+            <li><a href="#create-story">Create Story</a></li>
+            <li><a href="#browse-stories">Browse Stories</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#about-us">About Us</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+    </nav>
+
+    <main>
+        <section id="create-story" class="section-content">
+            <h2>Craft Your Own Adventure</h2>
+            <p>Unleash your creativity and build captivating interactive stories. Define your plot, characters, and crucial decision points that shape the narrative.</p>
+            <div class="story-creator">
+                <button id="start-new-story">Start a New Story</button>
+                <div id="story-editor" style="display:none;">
+                    <h3>Story Title:</h3>
+                    <input type="text" id="story-title-input" placeholder="e.g., The Mystery of the Whispering Woods">
+
+                    <h3>Story Introduction:</h3>
+                    <textarea id="story-intro-input" placeholder="Start your adventure here..."></textarea>
+
+                    <div id="story-nodes-container">
+                        <button class="add-node-btn">Add Decision Point</button>
+                    </div>
+                    <button id="save-story">Save Story</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="browse-stories" class="section-content">
+            <h2>Explore Interactive Tales</h2>
+            <p>Dive into a collection of user-created interactive stories. Make choices that lead to different outcomes and experience unique adventures.</p>
+            <div class="story-list">
+                <p>No stories available yet. Be the first to create one!</p>
+            </div>
+            <div class="story-reader" style="display:none;">
+                <h3 id="reader-story-title"></h3>
+                <div id="reader-story-content"></div>
+                <div id="reader-choices-container"></div>
+            </div>
+        </section>
+        <section id="how-it-works" class="section-content">
+            <h2>How It Works</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>1. Create Nodes</h3>
+                    <p>Design your story by creating "nodes" – segments of your narrative. Each node can end with a decision or lead directly to another node.</p>
+                </div>
+                <div class="info-item">
+                    <h3>2. Define Choices</h3>
+                    <p>At decision nodes, offer your readers distinct choices. Each choice will branch the story to a different subsequent node.</p>
+                </div>
+                <div class="info-item">
+                    <h3>3. Publish and Share</h3>
+                    <p>Once your story is complete, publish it to the platform for others to explore and enjoy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us" class="section-content">
+            <h2>About Us</h2>
+            <p>We are passionate about interactive storytelling and believe in empowering creators to build immersive narrative experiences.</p>
+            <p>Our mission is to provide a user-friendly platform for both story creation and consumption, fostering a vibrant community of interactive story enthusiasts.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
